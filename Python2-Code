@@ -3,7 +3,7 @@ herhalingen = 0
 import random
 geheimwoord = ['vriend', 'banaan', 'metis', 'yunus', 'wereld', 'verliefd', 'deceptie', 'omgekeerd', 'illusie', 'vlinder', 'locomotief', 'women', 'riley', 'explosie', 'februari', 'huis', 'baan', 'maandag', 'verkocht', 'fictie', 'soa', 'leugen', 'einde']
 
-#while True:
+
 def woordraden():
   global gw, gw2, gok, teller, herhalingen
   
@@ -29,57 +29,12 @@ def woordraden():
 
 def gameover():
   print("Je hebt het woord geraden")
-    #keuze = input("Wil je opnieuw spelen? Y/N ").lower()
-    #if keuze == "y":
-    #  print("Herstarten")
-    #  herhalingen = 0
-    #elif keuze == "n":
-    #  break
+
 def gameover2():
   print("Je hebt het niet kunnnen raden")
   print("Het woord was", gw)
-    #keuze = input("Wil je opnieuw spelen? Y/N ").lower()
-    #if keuze == "y":
-    #  print("Herstarten")
-    #  herhalingen = 0
-    #elif keuze == "n":
-    #  break
-    #else:
-    #  break
-
- # def doorgaan():
- #   global keuze
- #   
- #   keuze = input("Wil je opnieuw spelen? Y/N ").lower()
- #   if keuze == "y":
- #     print("Herstarten")
- #     herhalingen = 0
- #   elif keuze == "n":
- #     break
-  
-#  if gok == gw:
-#    print("Amogus")
-#    opnieuw = input("Wil jij opnieuw? ")
-#    opnieuw = opnieuw.lower()
-#    if opnieuw == "ja":
-#      herhalingen = 0
-#    elif keuze == "nee":
-#      break
-#    else:
-#      break
-      
-
-#for i in range(len(gw) + 1):
-#  if gok[i] == gw[i]:
-#    gok[i] == gw[i]
-#    print("Amogus")
-#  elif gok[i] in gw:
-#    gw2[i] = "?"
-#    #print("?", end = ' ')
-#print(gw2)
 
 def wordmind():
-  #global verder
   global herhalingen
   verder = True
   while verder:
@@ -93,13 +48,18 @@ def wordmind():
         woordraden()
       else:
         herhalingen = 0
-        #woordraden()
   
     if herhalingen > 5:
       gameover2()
       if input("Wil je verdergaan? ") == 'nee':
         verder = False
+      elif input == 'ja':
+        herhalingen = 0
+        woordraden()
+      else:
+        herhalingen = 0
 
 wordmind()
+  
   
   
